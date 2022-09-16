@@ -17,3 +17,5 @@ a = b
 b = c
 print("a: " + a)
 print("b: " + b)
+
+print("This how we print in python")
