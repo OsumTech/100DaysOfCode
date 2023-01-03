@@ -66,14 +66,6 @@ stages = ['''
 chosen_word = random.choice(word_list)
 print (chosen_word)
 
-#Step2
-
-
-#TODO-1: - Create an empty List called display.
-#For each letter in the chosen_word, add a "_" to 'display'.
-#So if the chosen_word was "apple", display should be ["_", "_", "_", "_", "_"] with 5 "_" representing each letter to guess.
-
-
 
 display_word =[]
 
@@ -81,12 +73,7 @@ for letter in chosen_word:
     display_word.append("_")
 
 
-
-#step3
-
-#TODO-1: - Use a while loop to let the user guess again. The loop should only stop once the user has guessed all the letters in the chosen_word and 'display' has no more blanks ("_"). Then you can tell the user they've won.
-
-
+lives = 6
 dash = "_"
 while dash in display_word:
     guess = input("Guess a letter: ").lower()
@@ -95,7 +82,13 @@ while dash in display_word:
      if letter == guess:
         display_word[i] = guess
      i += 1
-    print(display_word)   
+    print(f"{' '.join(display_word)}")
 else:
     print("Congratulations!!! You Have Won!")
 
+#step4
+#TODO-1: - Create a variable called 'lives' to keep track of the number of lives left. 
+#Set 'lives' to equal 6.
+#TODO-2: - If guess is not a letter in the chosen_word,
+    #Then reduce 'lives' by 1. 
+    #If lives goes down to 0 then the game should stop and it should print "You lose."
