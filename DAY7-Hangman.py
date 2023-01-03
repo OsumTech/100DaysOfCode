@@ -81,6 +81,7 @@ while dash in display_word:
     for letter in chosen_word:
      if letter == guess:
         display_word[i] = guess
+        print(stages[lives])
      i += 1
     print(f"{' '.join(display_word)}")
 else:
@@ -92,3 +93,4 @@ else:
 #TODO-2: - If guess is not a letter in the chosen_word,
     #Then reduce 'lives' by 1. 
     #If lives goes down to 0 then the game should stop and it should print "You lose."
+
