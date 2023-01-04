@@ -84,7 +84,7 @@ while game_end == False:
         display_word[i] = guess
         print(stages[lives])
      i += 1
-    print(f"{' '.join(display_word)}")
+     print(f"{' '.join(display_word)}")
     if not dash in display_word:
       game_end = True
     if not letter == guess:
