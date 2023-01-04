@@ -75,7 +75,8 @@ for letter in chosen_word:
 
 lives = 6
 dash = "_"
-while dash in display_word:
+game_end = False
+while game_end == False:
     guess = input("Guess a letter: ").lower()
     i=0
     for letter in chosen_word:
@@ -84,6 +85,13 @@ while dash in display_word:
         print(stages[lives])
      i += 1
     print(f"{' '.join(display_word)}")
+    if not dash in display_word:
+      game_end = True
+    if not letter == guess:
+      lives -= 1
+      print(stages[lives])
+    if lives == 0:
+      print("You Suck!!!")
 else:
     print("Congratulations!!! You Have Won!")
 
@@ -94,5 +102,3 @@ else:
     #Then reduce 'lives' by 1. 
     #If lives goes down to 0 then the game should stop and it should print "You lose."
 
-
- 
