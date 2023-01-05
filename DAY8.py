@@ -9,4 +9,4 @@ def greet(name, location):
     print(f"Hi There {name}")
     print(f"Weather is soo good here in {location}")
 
-greet("ahmed","faislabad")
+greet(name = "ahmed",location ="faislabad")
