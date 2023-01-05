@@ -1,5 +1,7 @@
 #Write your code below this line 👇
-
+def paint_calc(height,width,cover):
+    cans = round((height*width)/cover)
+    print(f"You Need {cans} cans.")
 
 
 
