@@ -1,5 +1,18 @@
 #Write your code below this line 👇
+def prime_checker(number):
+    
 
+    i = 1
+    f = 0
+    while i <= 9:
+        d = number % i
+        if d % i == 1:
+            f = f+1
+    
+    if f > 1:
+        print(f"{number} Is a Prime Number!")
+    else:
+        print(f"{number} Is not a Prime Number!")
 
 
 
