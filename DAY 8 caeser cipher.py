@@ -11,14 +11,16 @@ def encrypt(message,number):
 
     #TODO-2: Inside the 'encrypt' function, shift each letter of the 'text' forwards in the alphabet by the shift amount and print the encrypted text.  
     text_list = list(message)
-    print(text_list)
     cipher = []
     items = len(text_list)
     for i in range (0,items):
         letter = text_list[i]
         alpha = alphabet.index(letter)
         alpha = alpha + number
-        
+        word = alphabet[alpha]
+        cipher.append(word)
+    print(" ".join(cipher))
+
     #e.g. 
     #plain_text = "hello"
     #shift = 5
