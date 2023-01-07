@@ -1,6 +1,6 @@
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
-#direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
 text = input("Type your message:\n").lower()
 shift = int(input("Type the shift number:\n"))
 
@@ -32,5 +32,25 @@ def encrypt(message,number):
     #shift = 5
     #cipher_text = "mjqqt"
     #print output: "The encoded text is mjqqt"
+def decrypt(message,number):
+    text_list = list(message)
+    cipher = []
+    items = len(text_list)
+    for i in range (0,items):
+        letter = text_list[i]
+        if letter in alphabet:
+            alpha = alphabet.index(letter)
+            alpha = alpha - number
+            if alpha == 0:
+                alpha += 26
+                word = alphabet[alpha]
+                cipher.append(word)
+            else:
+                word = alphabet[alpha]
+                cipher.append(word)
+    print(" ".join(cipher))
 
-encrypt(message=text,number=shift)
+if direction == "encode":
+    encrypt(message=text,number=shift)
+elif direction == "decode":
+    decrypt(message=text,number=shift)
