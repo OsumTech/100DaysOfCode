@@ -15,10 +15,11 @@ def encrypt(message,number):
     items = len(text_list)
     for i in range (0,items):
         letter = text_list[i]
-        alpha = alphabet.index(letter)
-        alpha = alpha + number
-        word = alphabet[alpha]
-        cipher.append(word)
+        if letter in alphabet:
+            alpha = alphabet.index(letter)
+            alpha = alpha + number
+            word = alphabet[alpha]
+            cipher.append(word)
     print(" ".join(cipher))
 
     #e.g. 
