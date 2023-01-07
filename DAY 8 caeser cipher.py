@@ -18,8 +18,13 @@ def encrypt(message,number):
         if letter in alphabet:
             alpha = alphabet.index(letter)
             alpha = alpha + number
-            word = alphabet[alpha]
-            cipher.append(word)
+            if alpha >25:
+                alpha -= 26
+                word = alphabet[alpha]
+                cipher.append(word)
+            else:
+                word = alphabet[alpha]
+                cipher.append(word)
     print(" ".join(cipher))
 
     #e.g. 
