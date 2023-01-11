@@ -10,29 +10,22 @@ shift = int(input("Type the shift number:\n"))
 
 
 def caesar(message,number):
-    if direction == "encode": 
-        text_list = list(message)
-        cipher = []
-        items = len(text_list)
-        for i in range (0,items):
-            letter = text_list[i]
+    text_list = list(message)
+    cipher = []
+    items = len(text_list)
+    for i in range (0,items):
+        letter = text_list[i]    
+        if direction == "encode": 
             if letter in alphabet:
-                alpha = alphabet.index(letter)
-                alpha = alpha + number
-                word = alphabet[alpha]
-                cipher.append(word)
-        print(" ".join(cipher))
-    elif direction == "decode":
-        text_list = list(message)
-        cipher = []
-        items = len(text_list)
-        for i in range (0,items):
-            letter = text_list[i]
+                    alpha = alphabet.index(letter)
+                    alpha = alpha + number
+        elif direction == "decode":
             if letter in alphabet:
-                alpha = alphabet.index(letter)
-                alpha = alpha - number
-                word = alphabet[alpha]
-                cipher.append(word)
-        print(" ".join(cipher))
+                    alpha = alphabet.index(letter)
+                    alpha = alpha - number
+        word = alphabet[alpha]
+        cipher.append(word)
+    print(" ".join(cipher))
+                    
 
 caesar(message=text,number=shift)
