@@ -38,10 +38,11 @@ def caesar(start_text, shift_amount, cipher_direction):
     
     if shift> 26:
         shift_amount = shift % 26
-    repeat = input("Type 'yes' if you want to go again. Otherwise type 'no'\n").lower()
+
 
 while repeat == "yes":
     direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
     text = input("Type your message:\n").lower()
     shift = int(input("Type the shift number:\n"))
-    caesar(start_text=text, shift_amount=shift, cipher_direction=direction)
+    caesar(start_text=text, shift_amount=shift, cipher_direction=direction, try_again=repeat)
+    repeat = input("Type 'yes' if you want to go again. Otherwise type 'no'\n").lower()
