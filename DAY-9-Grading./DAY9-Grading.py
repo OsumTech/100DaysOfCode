@@ -15,7 +15,7 @@ student_grades={}
 for key in student_scores:
     marks = student_scores[key]
     student_grades[key] = marks
-    if marks >= 90:
+    if marks > 90:
         student_grades[key] = "Ouststanding"
     elif marks > 80:
         student_grades[key] = "Exceeds Expectations"
