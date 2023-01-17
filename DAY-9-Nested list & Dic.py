@@ -3,3 +3,4 @@ travel_log = {
     "Germany": {"Cities_Visited":["Berlin", "Hamburg", "Stuttgart"],"Total_visits":5}
 }
 
+print(travel_log["France"])
