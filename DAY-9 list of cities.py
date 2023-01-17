@@ -27,7 +27,7 @@ new_country = {
 name = input("Please Enter The Name of Country You Visited: ")
 times = input("Please Enter How Many Times Have you Visited It: ")
 
-def add_new_country(name, times):
+def add_new_country(name, times,city_list):
     new_country ["Country"] = name
     new_country ["Visits"] = times
     add_city = True
@@ -39,12 +39,8 @@ def add_new_country(name, times):
         if want_add == "n":
             add_city = False
 
-print(city_list)
-
+add_new_country(name,times,city_list)
 new_country["Cities"] = city_list
-
-add_new_country(name,times)
-
 travel_log.append(new_country)
 
 print(travel_log)
