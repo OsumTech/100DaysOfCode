@@ -30,11 +30,12 @@ times = input("Please Enter How Many Times Have you Visited It: ")
 def add_new_country(name, times,city_list):
     new_country ["Country"] = name
     new_country ["Visits"] = times
+    new_country ["Cities"] = city_list
     add_city = True
-    city_list = []
     while add_city:
         city = input("Please Enter The Cities You Visited Visited: ")
         city_list.append(city)
+        print (city_list)
         want_add = input("Do You Want To Add More Cities? Y or N: ")
         if want_add == "n":
             add_city = False
@@ -42,5 +43,6 @@ def add_new_country(name, times,city_list):
 add_new_country(name,times,city_list)
 new_country["Cities"] = city_list
 travel_log.append(new_country)
+
 
 print(travel_log)
