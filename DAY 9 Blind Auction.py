@@ -1,3 +1,4 @@
+from turtle import clear
 logo = '''
                          ___________
                          \         /
@@ -11,3 +12,7 @@ logo = '''
                        .-------------.
                       /_______________\\
 '''
+print(logo)
+sleep(3)
+print("hello world")
+os.system('cls')
