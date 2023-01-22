@@ -1,3 +1,5 @@
+import os
+from time import sleep
 from turtle import clear
 logo = '''
                          ___________
@@ -13,8 +15,15 @@ logo = '''
                       /_______________\\
 '''
 print(logo)
-sleep(3)
-print("hello world")
-os.system('cls')
-name = input("Please Enter Your Name:   ")
-bid = input("Please Enter Your Bid Amount:   ")
+
+biders = {}
+
+name = input("Please Enter Your Name:  ")
+bid = input("Please Enter our Bid Amount: $")
+
+
+biders[name] = bid
+
+
+
+#os.system('cls')
