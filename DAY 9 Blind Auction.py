@@ -17,13 +17,19 @@ logo = '''
 print(logo)
 
 biders = {}
+repeat = "yes"
 
-name = input("Please Enter Your Name:  ")
-bid = input("Please Enter our Bid Amount: $")
+while repeat == "yes":
+  name = input("Please Enter Your Name:  ")
+  bid = input("Please Enter our Bid Amount: $")
+  biders[name] = bid
+  if name > bid:
+    biders[name] = bid
+  #print(biders)
+  repeat = input("Is There any Other Bider? yes or no:  ")
+  if repeat == "yes":
+    os.system('cls')
+  else:
+    print(f"The Winner Is {biders}")
 
 
-biders[name] = bid
-
-
-
-#os.system('cls')
