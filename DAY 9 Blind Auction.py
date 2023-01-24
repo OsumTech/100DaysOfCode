@@ -30,6 +30,5 @@ while repeat == "yes":
   if repeat == "yes":
     os.system('cls')
   else:
-    print(f"The Winner Is {biders}")
-
-
+    max_value = max(biders)
+    print(f"The Winner is {max_value} with the bid of {biders[max_value]}" )
